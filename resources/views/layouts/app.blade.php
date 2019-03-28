@@ -45,7 +45,7 @@
                             <a class="nav-link" href="/about">About this site</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Write a new post</a>
+                            <a class="nav-link" href="/posts/create">Write a new post</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/posts">All posts</a>
