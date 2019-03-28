@@ -42,13 +42,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About this site</a>
+                            <a class="nav-link" href="/about">About this site</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Write a new post</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">All posts</a>
+                            <a class="nav-link" href="/posts">All posts</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">All authors</a>
