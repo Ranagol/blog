@@ -8,7 +8,7 @@
 	<h3>Authors</h3>
 	<table class="table">
 		<thead class="thead-dark">
-			<tr >
+			<tr>
 			    <th>Author</th>
 			    <th>Email</th>
 			    <th>Number of posts</th>
@@ -23,8 +23,7 @@
 		  		<td>{{$user->userHasManyPosts->count()}}</td>
 		  		<td>{{$user->userHasManyComments->count()}}</td>
 		  	</tr>
-		@endforeach
-		
+		@endforeach		
 	</table>
-
 </div>
+@endsection
