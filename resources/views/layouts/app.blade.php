@@ -51,7 +51,7 @@
                             <a class="nav-link" href="/posts">All posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">All authors</a>
+                            <a class="nav-link" href="/authors">All authors</a>
                         </li>
                     </ul>
 

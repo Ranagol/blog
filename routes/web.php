@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +29,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', function(){
 	return view('about');
 });
+
+Route::get('/authors', 'UsersController@index');
+
+/*
+Route::get('/authors', function(){
+	$users = User::all();
+	return view('authors', compact('users'));
+});
+*/
