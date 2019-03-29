@@ -63,7 +63,7 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -73,9 +73,15 @@ class PostsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Post $post)//$post is the old material. $request is the new, modified material.
     {
-        //
+        
+        $post->user_id = auth()->id();
+        $post->title = request('title');
+        $post->content = request('content');
+        $post->save();
+        
+        return redirect('/posts');
     }
 
     /**

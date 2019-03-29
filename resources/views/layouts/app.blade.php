@@ -53,6 +53,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/authors">All authors</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/authors">Your posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/authors">Your comments</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

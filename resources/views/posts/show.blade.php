@@ -10,7 +10,7 @@
     		<h5 class="card-title">Post title: {{$post->title}}</h5>
     		<h5 class="card-title">Author: {{$post->postBelongsToUser->name}}</h5>
     		<p class="card-text">{{$post->content}}</p>
-    		<a href="#" class="card-link">Card link</a>
+    		<a href="/posts/{{$post->id}}/edit" class="card-link">Edit post</a>
     		<a href="#" class="card-link">Another link</a>
   		</div>
 	</div>
