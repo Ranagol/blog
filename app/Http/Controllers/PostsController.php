@@ -36,6 +36,10 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'title' => ['required', 'min:3'],
+            'content' => ['required', 'min:3'],
+        ]);
         $post = new Post;
         $post->user_id = auth()->id();
         $post->title = $request->title;
@@ -75,7 +79,10 @@ class PostsController extends Controller
      */
     public function update(Request $request, Post $post)//$post is the old material. $request is the new, modified material.
     {
-        
+        request()->validate([
+            'title' => ['required', 'min:3'],
+            'content' => ['required', 'min:3'],
+        ]);
         $post->user_id = auth()->id();
         $post->title = request('title');
         $post->content = request('content');

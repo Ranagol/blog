@@ -32,7 +32,7 @@
 	<br>
 	<h6>Comments</h6>
 </div>
-
+@include('errors')
 <!--CREATING A NEW COMMENT-->
 <div class="container">
 	<div class="card">
@@ -45,7 +45,7 @@
 				    	<div class="d-flex justify-content-start">
 				    		<div><i class="fas fa-user"></i></div>
 
-				    		<div><input class="form-control" size="110" type="text" name="content" placeholder="Join the discussion..."></div>
+				    		<div><input class="form-control"  size="110" type="text" name="content" value ="{{old('content')}}" placeholder="Join the discussion..." required=""></div>
 
 				    		<div><input class="btn btn-success" type="submit" name="submit" value="Submit comment"></div>
 				    	</div>				    	

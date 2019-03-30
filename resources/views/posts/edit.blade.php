@@ -5,6 +5,7 @@
 @section('content')
 <div class="container">
 	<h3>Edit this post</h3>
+	@include('errors')
 	<form method="POST" action="/posts/{{$post->id}}">
 		@csrf
 		@method('PATCH')

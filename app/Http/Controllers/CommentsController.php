@@ -37,7 +37,9 @@ class CommentsController extends Controller
      */
     public function store(Post $post, Request $request)
     {
-        
+        request()->validate([
+            'content' => ['required', 'min:3'],
+        ]);
         $comment = new Comment;
         $comment->user_id = auth()->id();//This comes from the auth()
         $comment->post_id = $post->id;//This comes from the Post $post
