@@ -56,10 +56,10 @@
                             <a class="nav-link" href="/authors">All authors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/authors">Your posts</a>
+                            <a class="nav-link" href="/yourposts">Your posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/authors">Your comments</a>
+                            <a class="nav-link" href="/yourcomments">Your comments</a>
                         </li>
                     </ul>
 

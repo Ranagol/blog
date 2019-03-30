@@ -95,4 +95,11 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/posts');
     }
+
+    public function yourposts() {
+       
+        $id = auth()->id();
+        $posts = Post::all()->where('user_id', '=', $id);
+        return view('yourposts', compact('posts'));
+    }
 }

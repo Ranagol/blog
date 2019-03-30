@@ -33,3 +33,7 @@ Route::get('/about', function(){
 Route::get('/authors', 'UsersController@index');
 
 Route::post('/posts/{post}/comment', 'CommentsController@store');
+
+Route::get('/yourposts', 'PostsController@yourposts');
+
+Route::get('/yourcomments', 'CommentsController@yourcomments');

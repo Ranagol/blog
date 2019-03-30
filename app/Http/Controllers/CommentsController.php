@@ -39,9 +39,9 @@ class CommentsController extends Controller
     {
         
         $comment = new Comment;
-        $comment->user_id = auth()->id();
-        $comment->post_id = $post->id;
-        $comment->content = $request->input('content');
+        $comment->user_id = auth()->id();//This comes from the auth()
+        $comment->post_id = $post->id;//This comes from the Post $post
+        $comment->content = $request->input('content');//This comes form the Request $request
         $comment->save();
         return redirect('/posts/' . $post->id);
     }
@@ -89,5 +89,12 @@ class CommentsController extends Controller
     public function destroy(Comment $comment)
     {
         //
+    }
+
+    public function yourcomments(){
+
+        $id = auth()->id();
+        $comments = Comment::all()->where('user_id', '=', $id);
+        return view('yourcomments', compact('comments'));
     }
 }
