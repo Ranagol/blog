@@ -32,9 +32,4 @@ Route::get('/about', function(){
 
 Route::get('/authors', 'UsersController@index');
 
-/*
-Route::get('/authors', function(){
-	$users = User::all();
-	return view('authors', compact('users'));
-});
-*/
+Route::post('/posts/{post}/comment', 'CommentsController@store');

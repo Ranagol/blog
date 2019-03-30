@@ -28,4 +28,55 @@
 </div>
 
 
+<div class="container">
+	<br>
+	<h6>Comments</h6>
+</div>
+
+<!--CREATING A NEW COMMENT-->
+<div class="container">
+	<div class="card">
+		<div class="card-body">
+				<p class="card-text">
+				    
+				    <form method="POST" action="/posts/{{$post->id}}/comment">
+				    	@csrf
+
+				    	<div class="d-flex justify-content-start">
+				    		<div><i class="fas fa-user"></i></div>
+
+				    		<div><input class="form-control" size="110" type="text" name="content" placeholder="Join the discussion..."></div>
+
+				    		<div><input class="btn btn-success" type="submit" name="submit" value="Submit comment"></div>
+				    	</div>				    	
+				    </form>	    			
+				</p>
+		</div>
+	</div>
+</div>		
+
+
+<!--DISPLAYING ALL COMMENTS FOR THIS POST BELOW-->
+@if($post->postHasManyComments->count())
+	<div class="container">
+		@foreach($post->postHasManyComments as $comment)
+			<div class="card">
+		  		<div class="card-body">
+		    		<p class="card-text">
+		    			<i class="fas fa-user"></i>
+
+		    			{{$comment->commentBelongsToUser->name}} on {{$comment->commentBelongsToUser->created_at}}:
+		    			<br>
+		    			{{$comment->content}}
+		    		</p>
+		  		</div>
+			</div>
+		@endforeach
+	</div>
+@endif
+
+
+
+
+
 @endsection
