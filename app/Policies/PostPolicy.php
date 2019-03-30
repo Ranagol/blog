@@ -25,7 +25,7 @@ class PostPolicy
 
     public function edit(User $user, Post $post)
     {
-        return $post->user_id == $user->id;
+        return $post->user_id == $user->id || $user->email == 'blogadmin@gmail.com';
     }
 
 
@@ -49,7 +49,7 @@ class PostPolicy
      */
     public function update(User $user, Post $post)
     {
-        return $post->user_id == $user->id;
+        return $post->user_id == $user->id || $user->email == 'blogadmin@gmail.com';
     }
 
     /**
@@ -61,7 +61,7 @@ class PostPolicy
      */
     public function delete(User $user, Post $post)
     {
-        return $post->user_id == $user->id;
+        return $post->user_id == $user->id || $user->email == 'blogadmin@gmail.com';
     }
 
     /**
